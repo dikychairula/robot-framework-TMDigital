@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-28T21:05:06.559708" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Flow" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\test_case\test_flow.robot">
+<test id="s1-t1" name="Login" line="9">
+<kw name="Login with valid credentials">
+<msg time="2024-12-28T21:05:06.959280" level="FAIL">No keyword with name 'Login with valid credentials' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
+<status status="FAIL" start="2024-12-28T21:05:06.958995" elapsed="0.002584">No keyword with name 'Login with valid credentials' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</kw>
+<status status="FAIL" start="2024-12-28T21:05:06.953770" elapsed="0.009286">No keyword with name 'Login with valid credentials' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+</test>
+<status status="FAIL" start="2024-12-28T21:05:06.566269" elapsed="0.398906"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Flow">Test Flow</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-28T21:05:06.929010" level="ERROR">Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\test_case\test_flow.robot' on line 3: Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\login_steps.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-12-28T21:05:06.941479" level="WARN">Imported resource file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\create_scenario_steps.robot' is empty.</msg>
+<msg time="2024-12-28T21:05:06.949563" level="ERROR">Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\logout_steps.robot' on line 3: Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\login_steps.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
+</errors>
+</robot>
