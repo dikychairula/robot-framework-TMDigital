@@ -1,8 +1,9 @@
 *** Settings ***
 Library    SeleniumLibrary
+Resource    create_scenario_steps.robot
 
 *** Variables ***
-${FEATURE_SEARCH}    Robot1
+
 
 *** Keywords ***
 I Fill Search Feature Name

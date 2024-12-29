@@ -23,12 +23,32 @@ User Add New Feature
     And I Fill Feature Name
     And I Choose Role Assign
     And I Fill Description Feature
+    And I Click Button Save
+    And I Click Button Confirm
+    And I Click Button Ok
+    Then New Feature Created
 
-#Create Scenario
-#     Create Scenario in VentureHub Project
+User Search Feature By Name
+    Given I Am On The Feature Page
+    When I Fill Search Feature Name
+    And I Click on Feature Name
+    Then I Am On The Scenario Page
 
-# Logout From Website
-#     Given I Should See User Avatar
-#     When I Click User Dropdown   
-#     And I Click Logout Button
-#     Then I Should See Login Page
+Add New Scenario
+    Given I Am On The Scenario Page
+    When I Click Button Add New Scenario
+    And I Fill Scenario Name
+    And I Choose Role To Assign
+    And I Choose Priority
+    And I Fill Pre Condition
+    And I Fill Scenario Steps
+    And I Click Button Save
+    And I Click Button Add
+    And I Click Button Confirm Ok
+    Then New Scenario Created
+  
+Logout From Website
+    Given I Should See User Avatar
+    When I Click User Dropdown
+    And I Click Logout Button
+    Then I Should See Login Page

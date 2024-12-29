@@ -18,4 +18,5 @@ User Add New Feature
   And I Click Button Save
   And I Click Button Confirm
   And I Click Button Ok
+  Then New Feature Created
     

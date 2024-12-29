@@ -3,12 +3,13 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${PROJECT}                 VentureHub
-${FEATURE_NAME}            Robot4
+${FEATURE_NAME}            Robot15
 ${ROLE}                    Diky Chairul Azwar
-${FEATURE_DESCRIPTION}     Detail Robot Framework 4
+${FEATURE_DESCRIPTION}     Detail Robot Framework 15
 
 *** Keywords ***
 I Click The Project
+    Wait Until Element Is Visible    //span[contains(text(), '${PROJECT}')]
     Click Element    //span[contains(text(), '${PROJECT}')]
     Element Should Be Visible    //h2[contains(text(), 'Features List')]    timeout=15 seconds
 I Click Button Add New Feature
@@ -29,6 +30,10 @@ I Click Button Confirm
     Wait Until Element Is Visible    //button[@id='btnAddFeature']
     Click Button    //button[@id='btnAddFeature']
 I Click Button Ok
-    Wait Until Element Is Visible    //*[@id="savedFeatureUpdateSuccess"]/div/div/div[2]/div/button
-    Click Button    //*[@id="savedFeatureUpdateSuccess"]/div/div/div[2]/div/button
-# New Feature Create  
+    Sleep    3s
+    Wait Until Element Is Visible    (//button[contains(text(), 'Ok')])[3]    timeout=10s
+    Click Button    (//button[contains(text(), 'Ok')])[3]
+New Feature Created
+    sleep    2s
+
+    

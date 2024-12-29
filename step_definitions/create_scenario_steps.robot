@@ -2,9 +2,10 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${SCENARIO_NAME}     Scenario Robot 4
+${FEATURE_SEARCH}    Robot15
+${SCENARIO_NAME}     Scenario Robot 1
 ${ROLE}              Diky Chairul Azwar
-${PRIORITY}          High
+${PRIORITY}          Medium
 ${PRE_CONDITION}     Given User Has Add Feature
 ${SCENARIO_STEPS}    Given User Has on Scenario Page\nWhen User Click Button Add\nAnd User Click Fill The Fields\nAnd User Click Submit Button\nThen User Has Add Scenario
 
@@ -31,7 +32,8 @@ I Click Button Add
     Wait Until Element Is Visible    //button[@id='savedSuccess']
     Click Button    //button[@id='savedSuccess']
 I Click Button Confirm Ok
-    Wait Until Element Is Visible    //*[@id="savedSuccessModal"]/div/div/div[2]/div/button
-    Click Button    //*[@id="savedSuccessModal"]/div/div/div[2]/div/button
+    Sleep    5s
+    Wait Until Element Is Visible    (//button[contains(text(), 'Ok')])[1]    timeout=10s
+    Click Button    (//button[contains(text(), 'Ok')])[1]
 New Scenario Created
     sleep    5s
