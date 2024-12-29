@@ -1,28 +1,138 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-28T21:05:06.559708" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Flow" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\test_case\test_flow.robot">
-<test id="s1-t1" name="Login" line="9">
-<kw name="Login with valid credentials">
-<msg time="2024-12-28T21:05:06.959280" level="FAIL">No keyword with name 'Login with valid credentials' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</msg>
-<status status="FAIL" start="2024-12-28T21:05:06.958995" elapsed="0.002584">No keyword with name 'Login with valid credentials' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T07:37:20.287876" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Flow" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\test_case\test_flow.robot">
+<test id="s1-t1" name="Login" line="10">
+<kw name="Login with valid credentials" owner="login_steps">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:20.618900" level="INFO">Opening browser 'Chrome' to base url 'https://wgs:25K9v47BU52NpegG@beta-tmdigital.stagingapps.net/login'.</msg>
+<arg>${SP_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-29T07:37:20.618496" elapsed="4.832788"/>
 </kw>
-<status status="FAIL" start="2024-12-28T21:05:06.953770" elapsed="0.009286">No keyword with name 'Login with valid credentials' found. Did you try using keyword 'BuiltIn.Log' and forgot to use enough whitespace between keyword and arguments?</status>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:25.452254" level="INFO">Typing text 'dikychairula@gmail.com' into text field '//input[@name='email']'.</msg>
+<arg>//input[@name='email']</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:25.451659" elapsed="0.144306"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:25.596917" level="INFO">Typing text 'Kmzwa8awaa' into text field '//input[@name='password']'.</msg>
+<arg>//input[@name='password']</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:25.596515" elapsed="0.088149"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:25.685262" level="INFO">Clicking button '//button[contains(text(), 'Sign In')]'.</msg>
+<arg>//button[contains(text(), 'Sign In')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:25.684998" elapsed="2.345686"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:28.058383" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
+<arg>//h1[contains(text(), 'Dashboard')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T07:37:28.031081" elapsed="0.027549"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T07:37:33.059343" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T07:37:28.058847" elapsed="5.000761"/>
+</kw>
+<status status="PASS" start="2024-12-29T07:37:20.617411" elapsed="12.442370"/>
+</kw>
+<status status="PASS" start="2024-12-29T07:37:20.616412" elapsed="12.444098"/>
 </test>
-<status status="FAIL" start="2024-12-28T21:05:06.566269" elapsed="0.398906"/>
+<test id="s1-t2" name="Create Feature" line="13">
+<kw name="Create Feature PROJECT" owner="create_feature_steps">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:33.064310" level="INFO">Clicking element '//span[contains(text(), 'VentureHub')]'.</msg>
+<arg>//span[contains(text(), '${PROJECT}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:33.063908" elapsed="1.810294"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:34.896668" level="INFO">Element '//h2[contains(text(), 'Features List')]' is displayed.</msg>
+<arg>//h2[contains(text(), 'Features List')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T07:37:34.874557" elapsed="0.022352"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:34.897362" level="INFO">Clicking button '//button[@data-target='#addNewFeature']'.</msg>
+<arg>//button[@data-target='#addNewFeature']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:34.897124" elapsed="0.095742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//input[@name='name']</arg>
+<arg>timeout=10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T07:37:34.993778" elapsed="0.239503"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:35.233983" level="INFO">Typing text 'Robot1' into text field '//input[@name='name']'.</msg>
+<arg>//input[@name='name']</arg>
+<arg>Robot1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.233666" elapsed="0.103613"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:35.337864" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
+<arg>//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.337563" elapsed="0.083538"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']</arg>
+<arg>timeout=10 seconds</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.421536" elapsed="0.021819"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:35.443942" level="INFO">Clicking element '//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']'.</msg>
+<arg>//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.443659" elapsed="0.071273"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:35.515629" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
+<arg>//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.515279" elapsed="0.054745"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-12-29T07:37:35.570676" level="INFO">Typing text 'Detail Robot Framework' into text field '//textarea[@name='description']'.</msg>
+<arg>//textarea[@name='description']</arg>
+<arg>Detail Robot Framework</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.570305" elapsed="0.100478"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T07:37:45.671560" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T07:37:35.671117" elapsed="10.000730"/>
+</kw>
+<status status="PASS" start="2024-12-29T07:37:33.063329" elapsed="12.608686"/>
+</kw>
+<status status="PASS" start="2024-12-29T07:37:33.062329" elapsed="12.610617"/>
+</test>
+<status status="PASS" start="2024-12-29T07:37:20.292984" elapsed="25.383276"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Test Flow">Test Flow</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Test Flow">Test Flow</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-12-28T21:05:06.929010" level="ERROR">Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\test_case\test_flow.robot' on line 3: Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\login_steps.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
-<msg time="2024-12-28T21:05:06.941479" level="WARN">Imported resource file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\create_scenario_steps.robot' is empty.</msg>
-<msg time="2024-12-28T21:05:06.949563" level="ERROR">Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\logout_steps.robot' on line 3: Error in file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\TMDigital\step_definitions\login_steps.robot' on line 11: Resource file with 'Test Cases' section is invalid.</msg>
+<msg time="2024-12-29T07:37:20.610896" level="WARN">Imported resource file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\step_definitions\create_scenario_steps.robot' is empty.</msg>
 </errors>
 </robot>
