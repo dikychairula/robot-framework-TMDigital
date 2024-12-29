@@ -5,7 +5,7 @@ Resource    ../step_definitions/background.robot
 
 *** Test Cases ***
 Background
-  Given User opens the VentureHub website
+  Given User Open The Website
   When User is logged into the website
   
 Logout From Website

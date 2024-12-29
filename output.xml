@@ -1,343 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T10:56:45.706031" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Flow" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\test_case\test_flow.robot">
-<test id="s1-t1" name="Background" line="10">
-<kw name="Given User opens the VentureHub website" owner="background">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T13:29:21.442389" rpa="false" schemaversion="5">
+<suite id="s1" name="Search Feature" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\test_case\search_feature.robot">
+<test id="s1-t1" name="Background" line="6">
+<kw name="Given User Open The Website" owner="background">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:56:46.033435" level="INFO">Opening browser 'Chrome' to base url 'https://wgs:25K9v47BU52NpegG@beta-tmdigital.stagingapps.net/login'.</msg>
+<msg time="2024-12-29T13:29:21.814171" level="INFO">Opening browser 'Chrome' to base url 'https://wgs:25K9v47BU52NpegG@beta-tmdigital.stagingapps.net/login'.</msg>
 <arg>${SP_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-29T10:56:46.033084" elapsed="11.548606"/>
+<status status="PASS" start="2024-12-29T13:29:21.813805" elapsed="3.716673"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-12-29T10:56:57.582173" elapsed="0.029699"/>
+<status status="PASS" start="2024-12-29T13:29:25.530872" elapsed="0.035753"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:56:46.032092" elapsed="11.580138"/>
+<status status="PASS" start="2024-12-29T13:29:21.812561" elapsed="3.754301"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:56:46.031042" elapsed="11.581913"/>
-</test>
-<test id="s1-t2" name="User Login with valid credentials" line="13">
-<kw name="Given I Should See Login Page" owner="background">
+<kw name="When User is logged into the website" owner="background">
+<kw name="I Should See Login Page" owner="background">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:56:57.641241" level="INFO">Current page contains text 'Sign in'.</msg>
+<msg time="2024-12-29T13:29:25.613911" level="INFO">Current page contains text 'Sign in'.</msg>
 <arg>Sign in</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-12-29T10:56:57.618352" elapsed="0.023159"/>
+<status status="PASS" start="2024-12-29T13:29:25.569474" elapsed="0.044721"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T10:57:00.642320" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-12-29T13:29:28.615093" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T10:56:57.641733" elapsed="3.000865"/>
+<status status="PASS" start="2024-12-29T13:29:25.614441" elapsed="3.000922"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:56:57.617543" elapsed="3.025219"/>
+<status status="PASS" start="2024-12-29T13:29:25.568941" elapsed="3.046592"/>
 </kw>
-<kw name="When I Input Email" owner="login_steps">
+<kw name="I Input Email" owner="login_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:00.644547" level="INFO">Typing text 'dikychairula@gmail.com' into text field '//input[@name='email']'.</msg>
+<msg time="2024-12-29T13:29:28.616464" level="INFO">Typing text 'dikychairula@gmail.com' into text field '//input[@name='email']'.</msg>
 <arg>//input[@name='email']</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:00.644019" elapsed="0.146031"/>
+<status status="PASS" start="2024-12-29T13:29:28.616066" elapsed="0.149320"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:00.643533" elapsed="0.146759"/>
+<status status="PASS" start="2024-12-29T13:29:28.615751" elapsed="0.149862"/>
 </kw>
-<kw name="And I Input Password" owner="login_steps">
+<kw name="I Input Password" owner="login_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:00.791571" level="INFO">Typing text 'Kmzwa8awaa' into text field '//input[@name='password']'.</msg>
+<msg time="2024-12-29T13:29:28.766431" level="INFO">Typing text 'Kmzwa8awaa' into text field '//input[@name='password']'.</msg>
 <arg>//input[@name='password']</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:00.791227" elapsed="0.088473"/>
+<status status="PASS" start="2024-12-29T13:29:28.766153" elapsed="0.090112"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:00.790844" elapsed="0.089079"/>
+<status status="PASS" start="2024-12-29T13:29:28.765831" elapsed="0.090654"/>
 </kw>
-<kw name="And I Click Submit Button" owner="login_steps">
+<kw name="I Click Submit Button" owner="login_steps">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:00.881066" level="INFO">Clicking button '//button[contains(text(), 'Sign In')]'.</msg>
+<msg time="2024-12-29T13:29:28.857259" level="INFO">Clicking button '//button[contains(text(), 'Sign In')]'.</msg>
 <arg>//button[contains(text(), 'Sign In')]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:00.880817" elapsed="4.757648"/>
+<status status="PASS" start="2024-12-29T13:29:28.857028" elapsed="1.749813"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:00.880465" elapsed="4.758334"/>
+<status status="PASS" start="2024-12-29T13:29:28.856709" elapsed="1.750342"/>
 </kw>
-<kw name="Then I Should See Dashboard" owner="login_steps">
+<kw name="I Should See Dashboard" owner="login_steps">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:05.669291" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
+<msg time="2024-12-29T13:29:30.633879" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
 <arg>//h1[contains(text(), 'Dashboard')]</arg>
+<arg>timeout=15 seconds</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T10:57:05.639990" elapsed="0.029572"/>
+<status status="PASS" start="2024-12-29T13:29:30.607614" elapsed="0.026510"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T10:57:08.670685" level="INFO">Slept 3 seconds.</msg>
+<msg time="2024-12-29T13:29:33.634852" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T10:57:05.669783" elapsed="3.001179"/>
+<status status="PASS" start="2024-12-29T13:29:30.634341" elapsed="3.000767"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:05.639573" elapsed="3.031550"/>
+<status status="PASS" start="2024-12-29T13:29:30.607278" elapsed="3.027991"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:56:57.616580" elapsed="11.055247"/>
-</test>
-<test id="s1-t3" name="User Add New Feature" line="20">
-<kw name="Given I Should See Dashboard" owner="login_steps">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:08.692280" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
-<arg>//h1[contains(text(), 'Dashboard')]</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T10:57:08.674047" elapsed="0.018467"/>
+<status status="PASS" start="2024-12-29T13:29:25.567536" elapsed="8.067850"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T10:57:11.694012" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T10:57:08.692725" elapsed="3.001541"/>
-</kw>
-<status status="PASS" start="2024-12-29T10:57:08.673651" elapsed="3.020772"/>
-</kw>
-<kw name="When I Click The Project" owner="create_feature_steps">
+<kw name="And I Click The Project" owner="create_feature_steps">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:11.696599" level="INFO">Clicking element '//span[contains(text(), 'VentureHub')]'.</msg>
+<msg time="2024-12-29T13:29:33.636944" level="INFO">Clicking element '//span[contains(text(), 'VentureHub')]'.</msg>
 <arg>//span[contains(text(), '${PROJECT}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:11.696019" elapsed="3.115154"/>
+<status status="PASS" start="2024-12-29T13:29:33.636642" elapsed="2.968838"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:14.840199" level="INFO">Element '//h2[contains(text(), 'Features List')]' is displayed.</msg>
+<msg time="2024-12-29T13:29:36.635781" level="INFO">Element '//h2[contains(text(), 'Features List')]' is displayed.</msg>
+<arg>//h2[contains(text(), 'Features List')]</arg>
+<arg>timeout=15 seconds</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T13:29:36.605758" elapsed="0.030331"/>
+</kw>
+<status status="PASS" start="2024-12-29T13:29:33.636246" elapsed="3.000015"/>
+</kw>
+<status status="PASS" start="2024-12-29T13:29:21.811347" elapsed="14.829960"/>
+</test>
+<test id="s1-t2" name="User Search Feature By Name" line="11">
+<kw name="Given I Am On The Feature Page" owner="background">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-29T13:29:36.667211" level="INFO">Element '//h2[contains(text(), 'Features List')]' is displayed.</msg>
 <arg>//h2[contains(text(), 'Features List')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T10:57:14.811463" elapsed="0.029019"/>
+<status status="PASS" start="2024-12-29T13:29:36.644749" elapsed="0.022709"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:11.695132" elapsed="3.145503"/>
+<status status="PASS" start="2024-12-29T13:29:36.644363" elapsed="0.023252"/>
 </kw>
-<kw name="And I Click Button Add New Feature" owner="create_feature_steps">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:14.843588" level="INFO">Clicking button '//button[@data-target='#addNewFeature']'.</msg>
-<arg>//button[@data-target='#addNewFeature']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:14.843074" elapsed="0.095605"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//input[@name='name']</arg>
-<arg>timeout=10 seconds</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T10:57:14.938954" elapsed="0.248907"/>
-</kw>
-<status status="PASS" start="2024-12-29T10:57:14.841829" elapsed="0.346302"/>
-</kw>
-<kw name="And I Fill Project Name" owner="create_feature_steps">
+<kw name="When I Fill Search Feature Name" owner="search_feature_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:15.189542" level="INFO">Typing text 'Robot1' into text field '//input[@name='name']'.</msg>
-<arg>//input[@name='name']</arg>
-<arg>${FEATURE_NAME}</arg>
+<msg time="2024-12-29T13:29:36.670011" level="INFO">Typing text '[FE] - User Login' into text field '//input[@id='searchInput']'.</msg>
+<arg>//input[@id='searchInput']</arg>
+<arg>${FEATURE_SEARCH}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.189244" elapsed="0.219946"/>
+<status status="PASS" start="2024-12-29T13:29:36.669224" elapsed="0.147950"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:15.188853" elapsed="0.220550"/>
+<status status="PASS" start="2024-12-29T13:29:36.668096" elapsed="0.149298"/>
 </kw>
-<kw name="And I Choose Role Assign" owner="create_feature_steps">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:15.410553" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
-<arg>//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.410318" elapsed="0.093197"/>
-</kw>
+<kw name="And I Click on Feature Name" owner="search_feature_steps">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//label[contains(text(), '${ROLE}')]//input[@type='checkbox']</arg>
-<arg>timeout=10 seconds</arg>
+<arg>//span[contains(text(), '${FEATURE_SEARCH}')]</arg>
+<arg>timeout=15 seconds</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.503793" elapsed="0.019974"/>
+<status status="PASS" start="2024-12-29T13:29:36.823612" elapsed="0.859889"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:15.524373" level="INFO">Clicking element '//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']'.</msg>
-<arg>//label[contains(text(), '${ROLE}')]//input[@type='checkbox']</arg>
+<msg time="2024-12-29T13:29:37.684107" level="INFO">Clicking element '//span[contains(text(), '[FE] - User Login')]'.</msg>
+<arg>//span[contains(text(), '${FEATURE_SEARCH}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.524044" elapsed="0.069168"/>
+<status status="PASS" start="2024-12-29T13:29:37.683805" elapsed="2.789939"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:15.593730" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
-<arg>//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.593491" elapsed="0.057398"/>
+<status status="PASS" start="2024-12-29T13:29:36.823116" elapsed="3.650854"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:15.409945" elapsed="0.241163"/>
+<kw name="Then I Am On The Scenario Page" owner="search_feature_steps">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-29T13:29:40.504970" level="INFO">Current page contains text '[FE] - User Login'.</msg>
+<arg>${FEATURE_SEARCH}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-29T13:29:40.475131" elapsed="0.030187"/>
 </kw>
-<kw name="And I Fill Description Feature" owner="create_feature_steps">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:15.652270" level="INFO">Typing text 'Detail Robot Framework' into text field '//textarea[@name='description']'.</msg>
-<arg>//textarea[@name='description']</arg>
-<arg>Detail Robot Framework</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.652013" elapsed="0.088297"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-29T13:29:40.531487" level="INFO">Current page contains text 'Scenario'.</msg>
+<arg>Scenario</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-29T13:29:40.505545" elapsed="0.026191"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T10:57:20.741056" level="INFO">Slept 5 seconds.</msg>
-<arg>5s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T10:57:15.740592" elapsed="5.000758"/>
+<status status="PASS" start="2024-12-29T13:29:40.474633" elapsed="0.057412"/>
 </kw>
-<status status="PASS" start="2024-12-29T10:57:15.651654" elapsed="5.089853"/>
-</kw>
-<status status="PASS" start="2024-12-29T10:57:08.673005" elapsed="12.069109"/>
+<status status="PASS" start="2024-12-29T13:29:36.643706" elapsed="3.888960"/>
 </test>
-<test id="s1-t4" name="Logout From Website" line="31">
-<kw name="Given I Should See User Avatar" owner="logout_steps">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:20.766095" level="INFO">Element '//img[@class='img-profile rounded-circle']' is displayed.</msg>
-<arg>//img[@class='img-profile rounded-circle']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T10:57:20.744934" elapsed="0.022090"/>
-</kw>
-<status status="PASS" start="2024-12-29T10:57:20.744401" elapsed="0.022811"/>
-</kw>
-<kw name="When I Click User Dropdown" owner="logout_steps">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T10:57:20.768432" level="INFO">Clicking element '//a[@id='userDropdown']'.</msg>
-<msg time="2024-12-29T10:57:21.991161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-12-29T10:57:21.991651" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="" title=""&gt;...&lt;/a&gt; is not clickable at point (1776, 44). Other element would receive the click: &lt;div class="modal medium fade show" id="addNewFeature" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-modal="true" role="dialog" style="padding-right: 17px; display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.205)
-Stacktrace:
-	GetHandleVerifier [0x00007FF672D7FB05+28789]
-	(No symbol) [0x00007FF672CE86E0]
-	(No symbol) [0x00007FF672B8592A]
-	(No symbol) [0x00007FF672BE0FDE]
-	(No symbol) [0x00007FF672BDEA7C]
-	(No symbol) [0x00007FF672BDBC46]
-	(No symbol) [0x00007FF672BDABA1]
-	(No symbol) [0x00007FF672BCCD60]
-	(No symbol) [0x00007FF672BFF43A]
-	(No symbol) [0x00007FF672BCC5B6]
-	(No symbol) [0x00007FF672BFF650]
-	(No symbol) [0x00007FF672C1F654]
-	(No symbol) [0x00007FF672BFF1E3]
-	(No symbol) [0x00007FF672BCA938]
-	(No symbol) [0x00007FF672BCBAA1]
-	GetHandleVerifier [0x00007FF6730B933D+3410093]
-	GetHandleVerifier [0x00007FF6730CE7DD+3497293]
-	GetHandleVerifier [0x00007FF6730C2A73+3448803]
-	GetHandleVerifier [0x00007FF672E47BBB+848171]
-	(No symbol) [0x00007FF672CF3C3F]
-	(No symbol) [0x00007FF672CEF6E4]
-	(No symbol) [0x00007FF672CEF87D]
-	(No symbol) [0x00007FF672CDED49]
-	BaseThreadInitThunk [0x00007FF842007374+20]
-	RtlUserThreadStart [0x00007FF84255CC91+33]
-</msg>
-<arg>//a[@id='userDropdown']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-12-29T10:57:20.768191" elapsed="1.231809">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="" title=""&gt;...&lt;/a&gt; is not clickable at point (1776, 44). Other element would receive the click: &lt;div class="modal medium fade show" id="addNewFeature" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-modal="true" role="dialog" style="padding-right: 17px; display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.205)
-Stacktrace:
-	GetHandleVerifier [0x00007FF672D7FB05+28789]
-	(No symbol) [0x00007FF672CE86E0]
-	(No symbol) [0x00007FF672B8592A]
-	(No symbol) [0x00007FF672BE0FDE]
-	(No symbol) [0x00007FF672BDEA7C]
-	(No symbol) [0x00007FF672BDBC46]
-	(No symbol) [0x00007FF672BDABA1]
-	(No symbol) [0x00007FF672BCCD60]
-	(No symbol) [0x00007FF672BFF43A]
-	(No symbol) [0x00007FF672BCC5B6]
-	(No symbol) [0x00007FF672BFF650]
-	(No symbol) [0x00007FF672C1F654]
-	(No symbol) [0x00007FF672BFF1E3]
-	(No symbol) [0x00007FF672BCA938]
-	(No symbol) [0x00007FF672BCBAA1]
-	GetHandleVerifier [0x00007FF6730B933D+3410093]
-	GetHandleVerifier [0x00007FF6730CE7DD+3497293]
-	GetHandleVerifier [0x00007FF6730C2A73+3448803]
-	GetHandleVerifier [0x00007FF672E47BBB+848171]
-	(No symbol) [0x00007FF672CF3C3F]
-	(No symbol) [0x00007FF672CEF6E4]
-	(No symbol) [0x00007FF672CEF87D]
-	(No symbol) [0x00007FF672CDED49]
-	BaseThreadInitThunk [0x00007FF842007374+20]
-	RtlUserThreadStart [0x00007FF84255CC91+33]
-</status>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//a[contains(text(), 'Log out')]</arg>
-<arg>timeout=10s</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-12-29T10:57:22.000360" elapsed="0.000131"/>
-</kw>
-<status status="FAIL" start="2024-12-29T10:57:20.767751" elapsed="1.232961">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="" title=""&gt;...&lt;/a&gt; is not clickable at point (1776, 44). Other element would receive the click: &lt;div class="modal medium fade show" id="addNewFeature" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-modal="true" role="dialog" style="padding-right: 17px; display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.205)
-Stacktrace:
-	GetHandleVerifier [0x00007FF672D7FB05+28789]
-	(No symbol) [0x00007FF672CE86E0]
-	(No symbol) [0x00007FF672B8592A]
-	(No symbol) [0x00007FF672BE0FDE]
-	(No symbol) [0x00007FF672BDEA7C]
-	(No symbol) [0x00007FF672BDBC46]
-	(No symbol) [0x00007FF672BDABA1]
-	(No symbol) [0x00007FF672BCCD60]
-	(No symbol) [0x00007FF672BFF43A]
-	(No symbol) [0x00007FF672BCC5B6]
-	(No symbol) [0x00007FF672BFF650]
-	(No symbol) [0x00007FF672C1F654]
-	(No symbol) [0x00007FF672BFF1E3]
-	(No symbol) [0x00007FF672BCA938]
-	(No symbol) [0x00007FF672BCBAA1]
-	GetHandleVerifier [0x00007FF6730B933D+3410093]
-	GetHandleVerifier [0x00007FF6730CE7DD+3497293]
-	GetHandleVerifier [0x00007FF6730C2A73+3448803]
-	GetHandleVerifier [0x00007FF672E47BBB+848171]
-	(No symbol) [0x00007FF672CF3C3F]
-	(No symbol) [0x00007FF672CEF6E4]
-	(No symbol) [0x00007FF672CEF87D]
-	(No symbol) [0x00007FF672CDED49]
-	BaseThreadInitThunk [0x00007FF842007374+20]
-	RtlUserThreadStart [0x00007FF84255CC91+33]
-</status>
-</kw>
-<kw name="And I Click Logout Button" owner="logout_steps">
-<status status="NOT RUN" start="2024-12-29T10:57:22.001884" elapsed="0.000157"/>
-</kw>
-<kw name="Then I Should See Login Page" owner="background">
-<status status="NOT RUN" start="2024-12-29T10:57:22.002735" elapsed="0.000170"/>
-</kw>
-<status status="FAIL" start="2024-12-29T10:57:20.743729" elapsed="1.259790">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-original-title="" title=""&gt;...&lt;/a&gt; is not clickable at point (1776, 44). Other element would receive the click: &lt;div class="modal medium fade show" id="addNewFeature" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-modal="true" role="dialog" style="padding-right: 17px; display: block;"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.205)
-Stacktrace:
-	GetHandleVerifier [0x00007FF672D7FB05+28789]
-	(No symbol) [0x00007FF672CE86E0]
-	(No symbol) [0x00007FF672B8592A]
-	(No symbol) [0x00007FF672BE0FDE]
-	(No symbol) [0x00007FF672BDEA7C]
-	(No symbol) [0x00007FF672BDBC46]
-	(No symbol) [0x00007FF672BDABA1]
-	(No symbol) [0x00007FF672BCCD60]
-	(No symbol) [0x00007FF672BFF43A]
-	(No symbol) [0x00007FF672BCC5B6]
-	(No symbol) [0x00007FF672BFF650]
-	(No symbol) [0x00007FF672C1F654]
-	(No symbol) [0x00007FF672BFF1E3]
-	(No symbol) [0x00007FF672BCA938]
-	(No symbol) [0x00007FF672BCBAA1]
-	GetHandleVerifier [0x00007FF6730B933D+3410093]
-	GetHandleVerifier [0x00007FF6730CE7DD+3497293]
-	GetHandleVerifier [0x00007FF6730C2A73+3448803]
-	GetHandleVerifier [0x00007FF672E47BBB+848171]
-	(No symbol) [0x00007FF672CF3C3F]
-	(No symbol) [0x00007FF672CEF6E4]
-	(No symbol) [0x00007FF672CEF87D]
-	(No symbol) [0x00007FF672CDED49]
-	BaseThreadInitThunk [0x00007FF842007374+20]
-	RtlUserThreadStart [0x00007FF84255CC91+33]
-</status>
-</test>
-<status status="FAIL" start="2024-12-29T10:56:45.711451" elapsed="36.296973"/>
+<status status="PASS" start="2024-12-29T13:29:21.449034" elapsed="19.085434"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="3" fail="1" skip="0" id="s1" name="Test Flow">Test Flow</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Search Feature">Search Feature</stat>
 </suite>
 </statistics>
 <errors>

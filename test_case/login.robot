@@ -4,7 +4,7 @@ Resource    ../step_definitions/background.robot
 
 *** Test Cases ***
 Background
-  Given User opens the VentureHub website
+  Given User Open The Website
   
 User Login with valid credentials
   Given I Should See Login Page
