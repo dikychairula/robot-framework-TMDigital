@@ -15,4 +15,7 @@ User Add New Feature
   And I Fill Feature Name
   And I Choose Role Assign
   And I Fill Description Feature
+  And I Click Button Save
+  And I Click Button Confirm
+  And I Click Button Ok
     

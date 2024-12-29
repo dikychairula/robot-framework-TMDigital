@@ -9,7 +9,7 @@ Background
     And User Has Click On Project
 
 User Search Feature By Name
-  Given I Am On The Feature Page
-  When I Fill Search Feature Name
-  And I Click on Feature Name
-  Then I Am On The Scenario Page
+    Given I Am On The Feature Page
+    When I Fill Search Feature Name
+    And I Click on Feature Name
+    Then I Am On The Scenario Page

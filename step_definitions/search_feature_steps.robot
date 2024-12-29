@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${FEATURE_SEARCH}    [FE] - User Login
+${FEATURE_SEARCH}    Robot1
 
 *** Keywords ***
 I Fill Search Feature Name

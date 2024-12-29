@@ -1,6 +1,7 @@
 *** Settings ***
 Resource    ../step_definitions/create_scenario_steps.robot
 Resource    ../step_definitions/background.robot
+Resource    ../step_definitions/create_feature_steps.robot
 
 *** Test Cases ***
 Background
@@ -16,3 +17,8 @@ Add New Scenario
   And I Choose Priority
   And I Fill Pre Condition
   And I Fill Scenario Steps
+  And I Click Button Save
+  And I Click Button Add
+  And I Click Button Confirm Ok
+  Then New Scenario Created
+  

@@ -3,9 +3,9 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${PROJECT}                 VentureHub
-${FEATURE_NAME}            Robot1
+${FEATURE_NAME}            Robot4
 ${ROLE}                    Diky Chairul Azwar
-${FEATURE_DESCRIPTION}     Detail Robot Framework 1
+${FEATURE_DESCRIPTION}     Detail Robot Framework 4
 
 *** Keywords ***
 I Click The Project
@@ -23,4 +23,12 @@ I Choose Role Assign
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
 I Fill Description Feature
     Input Text    //textarea[@name='description']    ${FEATURE_DESCRIPTION}
-    Sleep    5s
+I Click Button Save
+    Click Button    //*[@id="form-add"]/div[5]/button[2]
+I Click Button Confirm
+    Wait Until Element Is Visible    //button[@id='btnAddFeature']
+    Click Button    //button[@id='btnAddFeature']
+I Click Button Ok
+    Wait Until Element Is Visible    //*[@id="savedFeatureUpdateSuccess"]/div/div/div[2]/div/button
+    Click Button    //*[@id="savedFeatureUpdateSuccess"]/div/div/div[2]/div/button
+# New Feature Create  

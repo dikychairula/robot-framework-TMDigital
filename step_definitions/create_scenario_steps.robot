@@ -2,9 +2,9 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${SCENARIO_NAME}     Scenario Robot 1
+${SCENARIO_NAME}     Scenario Robot 4
 ${ROLE}              Diky Chairul Azwar
-${PRIORITY}          Medium
+${PRIORITY}          High
 ${PRE_CONDITION}     Given User Has Add Feature
 ${SCENARIO_STEPS}    Given User Has on Scenario Page\nWhen User Click Button Add\nAnd User Click Fill The Fields\nAnd User Click Submit Button\nThen User Has Add Scenario
 
@@ -20,11 +20,18 @@ I Choose Role To Assign
     Click Element    //label[contains(text(), '${ROLE}')]//input[@type='checkbox']
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
 I Choose Priority
-    Click Element    (//*[@id="sortDropdown"])[13]
+    Click Element    //a[@class='nav-link dropdown-toggle inputText std-input w-100']
     Wait Until Element Is Visible    (//span[contains(text(), '${Priority}')])[1]    timeout=15 seconds
     Click Element    (//span[contains(text(), '${Priority}')])[1]
 I Fill Pre Condition
     Input Text    //*[@id="editor-01"]/div[1]    ${PRE_CONDITION}
 I Fill Scenario Steps
   Input Text    //*[@id="editor-02"]/div[1]    ${SCENARIO_STEPS}
-  Sleep    20s
+I Click Button Add
+    Wait Until Element Is Visible    //button[@id='savedSuccess']
+    Click Button    //button[@id='savedSuccess']
+I Click Button Confirm Ok
+    Wait Until Element Is Visible    //*[@id="savedSuccessModal"]/div/div/div[2]/div/button
+    Click Button    //*[@id="savedSuccessModal"]/div/div/div[2]/div/button
+New Scenario Created
+    sleep    5s

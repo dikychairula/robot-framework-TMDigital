@@ -10,6 +10,6 @@ Background
   
 Logout From Website
   Given I Should See User Avatar
-  When I Click User Dropdown   
+  When I Click User Dropdown
   And I Click Logout Button
   Then I Should See Login Page
