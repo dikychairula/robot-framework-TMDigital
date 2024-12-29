@@ -2,9 +2,10 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${PROJECT}    VentureHub
-${FEATURE_NAME}    Robot1
-${ROLE}    Diky Chairul Azwar
+${PROJECT}                 VentureHub
+${FEATURE_NAME}            Robot1
+${ROLE}                    Diky Chairul Azwar
+${FEATURE_DESCRIPTION}     Detail Robot Framework
 
 *** Keywords ***
 I Click The Project
@@ -21,5 +22,5 @@ I Choose Role Assign
     Click Element    //label[contains(text(), '${ROLE}')]//input[@type='checkbox']
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
 I Fill Description Feature
-    Input Text    //textarea[@name='description']    Detail Robot Framework
+    Input Text    //textarea[@name='description']    ${FEATURE_DESCRIPTION}
     Sleep    5s
