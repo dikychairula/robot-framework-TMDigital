@@ -1,5 +1,6 @@
+# Mengabaikan file dengan ekstensi .html dan .xml
+*.html
+*.xml
+
+# Mengabaikan file tertentu
 env.robot
-log.html
-output.xml
-interactive_console_output.xml
-report.html
