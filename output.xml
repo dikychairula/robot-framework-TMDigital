@@ -1,126 +1,187 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T07:37:20.287876" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Flow" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\test_case\test_flow.robot">
-<test id="s1-t1" name="Login" line="10">
-<kw name="Login with valid credentials" owner="login_steps">
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-29T09:11:43.468020" rpa="false" schemaversion="5">
+<suite id="s1" name="Create Feature" source="c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\test_case\create_feature.robot">
+<test id="s1-t1" name="Background" line="7">
+<kw name="Given User opens the VentureHub website" owner="background">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:20.618900" level="INFO">Opening browser 'Chrome' to base url 'https://wgs:25K9v47BU52NpegG@beta-tmdigital.stagingapps.net/login'.</msg>
+<msg time="2024-12-29T09:11:43.889086" level="INFO">Opening browser 'Chrome' to base url 'https://wgs:25K9v47BU52NpegG@beta-tmdigital.stagingapps.net/login'.</msg>
 <arg>${SP_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-12-29T07:37:20.618496" elapsed="4.832788"/>
+<status status="PASS" start="2024-12-29T09:11:43.888289" elapsed="5.332411"/>
 </kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-29T09:11:49.221274" elapsed="0.039212"/>
+</kw>
+<status status="PASS" start="2024-12-29T09:11:43.884258" elapsed="5.376603"/>
+</kw>
+<kw name="When User is logged into the website" owner="background">
+<kw name="I Should See Login Page" owner="background">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-12-29T09:11:49.290609" level="INFO">Current page contains text 'Sign in'.</msg>
+<arg>Sign in</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-12-29T09:11:49.266322" elapsed="0.024591"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T09:11:52.292018" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T09:11:49.291210" elapsed="3.001443"/>
+</kw>
+<status status="PASS" start="2024-12-29T09:11:49.265934" elapsed="3.027049"/>
+</kw>
+<kw name="I Input Email" owner="login_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:25.452254" level="INFO">Typing text 'dikychairula@gmail.com' into text field '//input[@name='email']'.</msg>
+<msg time="2024-12-29T09:11:52.293939" level="INFO">Typing text 'dikychairula@gmail.com' into text field '//input[@name='email']'.</msg>
 <arg>//input[@name='email']</arg>
 <arg>${EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:25.451659" elapsed="0.144306"/>
+<status status="PASS" start="2024-12-29T09:11:52.293528" elapsed="0.147295"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:11:52.293215" elapsed="0.147860"/>
+</kw>
+<kw name="I Input Password" owner="login_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:25.596917" level="INFO">Typing text 'Kmzwa8awaa' into text field '//input[@name='password']'.</msg>
+<msg time="2024-12-29T09:11:52.443366" level="INFO">Typing text 'Kmzwa8awaa' into text field '//input[@name='password']'.</msg>
 <arg>//input[@name='password']</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:25.596515" elapsed="0.088149"/>
+<status status="PASS" start="2024-12-29T09:11:52.442340" elapsed="0.087616"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:11:52.441332" elapsed="0.088849"/>
+</kw>
+<kw name="I Click Submit Button" owner="login_steps">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:25.685262" level="INFO">Clicking button '//button[contains(text(), 'Sign In')]'.</msg>
+<msg time="2024-12-29T09:11:52.530967" level="INFO">Clicking button '//button[contains(text(), 'Sign In')]'.</msg>
 <arg>//button[contains(text(), 'Sign In')]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:25.684998" elapsed="2.345686"/>
+<status status="PASS" start="2024-12-29T09:11:52.530744" elapsed="3.949376"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:11:52.530425" elapsed="3.949968"/>
+</kw>
+<kw name="I Should See Dashboard" owner="login_steps">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:28.058383" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
+<msg time="2024-12-29T09:11:56.507695" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
 <arg>//h1[contains(text(), 'Dashboard')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T07:37:28.031081" elapsed="0.027549"/>
+<status status="PASS" start="2024-12-29T09:11:56.480935" elapsed="0.027007"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T07:37:33.059343" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-12-29T09:12:01.508706" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T07:37:28.058847" elapsed="5.000761"/>
+<status status="PASS" start="2024-12-29T09:11:56.508153" elapsed="5.000817"/>
 </kw>
-<status status="PASS" start="2024-12-29T07:37:20.617411" elapsed="12.442370"/>
+<status status="PASS" start="2024-12-29T09:11:56.480631" elapsed="5.028496"/>
 </kw>
-<status status="PASS" start="2024-12-29T07:37:20.616412" elapsed="12.444098"/>
+<status status="PASS" start="2024-12-29T09:11:49.265337" elapsed="12.243905"/>
+</kw>
+<status status="PASS" start="2024-12-29T09:11:43.879786" elapsed="17.630185"/>
 </test>
-<test id="s1-t2" name="Create Feature" line="13">
-<kw name="Create Feature PROJECT" owner="create_feature_steps">
+<test id="s1-t2" name="User Add New Feature" line="10">
+<kw name="Given I Should See Dashboard" owner="login_steps">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-29T09:12:01.583689" level="INFO">Element '//h1[contains(text(), 'Dashboard')]' is displayed.</msg>
+<arg>//h1[contains(text(), 'Dashboard')]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-29T09:12:01.512397" elapsed="0.071533"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-12-29T09:12:06.585259" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-12-29T09:12:01.584271" elapsed="5.001244"/>
+</kw>
+<status status="PASS" start="2024-12-29T09:12:01.511760" elapsed="5.073912"/>
+</kw>
+<kw name="When I Click The Project" owner="create_feature_steps">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:33.064310" level="INFO">Clicking element '//span[contains(text(), 'VentureHub')]'.</msg>
+<msg time="2024-12-29T09:12:06.587235" level="INFO">Clicking element '//span[contains(text(), 'VentureHub')]'.</msg>
 <arg>//span[contains(text(), '${PROJECT}')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:33.063908" elapsed="1.810294"/>
+<status status="PASS" start="2024-12-29T09:12:06.586894" elapsed="1.862234"/>
 </kw>
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:34.896668" level="INFO">Element '//h2[contains(text(), 'Features List')]' is displayed.</msg>
+<msg time="2024-12-29T09:12:08.471228" level="INFO">Element '//h2[contains(text(), 'Features List')]' is displayed.</msg>
 <arg>//h2[contains(text(), 'Features List')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T07:37:34.874557" elapsed="0.022352"/>
+<status status="PASS" start="2024-12-29T09:12:08.449449" elapsed="0.022059"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:12:06.586392" elapsed="1.885277"/>
+</kw>
+<kw name="And I Click Button Add New Feature" owner="create_feature_steps">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:34.897362" level="INFO">Clicking button '//button[@data-target='#addNewFeature']'.</msg>
+<msg time="2024-12-29T09:12:08.476564" level="INFO">Clicking button '//button[@data-target='#addNewFeature']'.</msg>
 <arg>//button[@data-target='#addNewFeature']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:34.897124" elapsed="0.095742"/>
+<status status="PASS" start="2024-12-29T09:12:08.476318" elapsed="0.095620"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//input[@name='name']</arg>
 <arg>timeout=10 seconds</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T07:37:34.993778" elapsed="0.239503"/>
+<status status="PASS" start="2024-12-29T09:12:08.572239" elapsed="0.458771"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:12:08.475906" elapsed="0.555371"/>
+</kw>
+<kw name="And I Fill Project Name" owner="create_feature_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:35.233983" level="INFO">Typing text 'Robot1' into text field '//input[@name='name']'.</msg>
+<msg time="2024-12-29T09:12:09.033466" level="INFO">Typing text 'Robot1' into text field '//input[@name='name']'.</msg>
 <arg>//input[@name='name']</arg>
 <arg>Robot1</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.233666" elapsed="0.103613"/>
+<status status="PASS" start="2024-12-29T09:12:09.033068" elapsed="0.088928"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:12:09.031947" elapsed="0.090278"/>
+</kw>
+<kw name="And I Choose Role Assign" owner="create_feature_steps">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:35.337864" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
+<msg time="2024-12-29T09:12:09.127294" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
 <arg>//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.337563" elapsed="0.083538"/>
+<status status="PASS" start="2024-12-29T09:12:09.126982" elapsed="0.081172"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']</arg>
+<arg>//label[contains(text(), '${ROLE}')]//input[@type='checkbox']</arg>
 <arg>timeout=10 seconds</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.421536" elapsed="0.021819"/>
+<status status="PASS" start="2024-12-29T09:12:09.208462" elapsed="0.019700"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:35.443942" level="INFO">Clicking element '//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']'.</msg>
-<arg>//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']</arg>
+<msg time="2024-12-29T09:12:09.228765" level="INFO">Clicking element '//label[contains(text(), 'Diky Chairul Azwar')]//input[@type='checkbox']'.</msg>
+<arg>//label[contains(text(), '${ROLE}')]//input[@type='checkbox']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.443659" elapsed="0.071273"/>
+<status status="PASS" start="2024-12-29T09:12:09.228441" elapsed="0.070887"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:35.515629" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
+<msg time="2024-12-29T09:12:09.299843" level="INFO">Clicking element '//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]'.</msg>
 <arg>//button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.515279" elapsed="0.054745"/>
+<status status="PASS" start="2024-12-29T09:12:09.299601" elapsed="0.059357"/>
 </kw>
+<status status="PASS" start="2024-12-29T09:12:09.126571" elapsed="0.232597"/>
+</kw>
+<kw name="And I Fill Description Feature" owner="create_feature_steps">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-12-29T07:37:35.570676" level="INFO">Typing text 'Detail Robot Framework' into text field '//textarea[@name='description']'.</msg>
+<msg time="2024-12-29T09:12:09.360332" level="INFO">Typing text 'Detail Robot Framework' into text field '//textarea[@name='description']'.</msg>
 <arg>//textarea[@name='description']</arg>
 <arg>Detail Robot Framework</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.570305" elapsed="0.100478"/>
+<status status="PASS" start="2024-12-29T09:12:09.360067" elapsed="0.103326"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-12-29T07:37:45.671560" level="INFO">Slept 10 seconds.</msg>
-<arg>10s</arg>
+<msg time="2024-12-29T09:12:14.464245" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-12-29T07:37:35.671117" elapsed="10.000730"/>
+<status status="PASS" start="2024-12-29T09:12:09.463712" elapsed="5.000788"/>
 </kw>
-<status status="PASS" start="2024-12-29T07:37:33.063329" elapsed="12.608686"/>
+<status status="PASS" start="2024-12-29T09:12:09.359679" elapsed="5.104978"/>
 </kw>
-<status status="PASS" start="2024-12-29T07:37:33.062329" elapsed="12.610617"/>
+<status status="PASS" start="2024-12-29T09:12:01.511140" elapsed="12.954175"/>
 </test>
-<status status="PASS" start="2024-12-29T07:37:20.292984" elapsed="25.383276"/>
+<status status="PASS" start="2024-12-29T09:11:43.475235" elapsed="30.991531"/>
 </suite>
 <statistics>
 <total>
@@ -129,10 +190,9 @@
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="Test Flow">Test Flow</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Create Feature">Create Feature</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-12-29T07:37:20.610896" level="WARN">Imported resource file 'c:\Users\Dr Vortex\Documents\Bootcamp\robot-framework\robot-framework-TMDigital\step_definitions\create_scenario_steps.robot' is empty.</msg>
 </errors>
 </robot>
