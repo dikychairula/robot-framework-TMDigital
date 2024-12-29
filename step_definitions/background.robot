@@ -2,6 +2,7 @@
 Resource    ../step_definitions/login_steps.robot
 Resource    ../env.robot
 Resource    create_feature_steps.robot
+Resource    search_feature_steps.robot
 
 *** Keywords ***
 User Open The Website
@@ -15,6 +16,14 @@ User Is Logged Into the Website
   I Click Submit Button
   I Should See Dashboard
 
+User Has on Scenario Page
+  I Fill Search Feature Name
+  I Click on Feature Name
+  I Am On The Scenario Page
+  
+User Has Click On Project
+  I Click The Project
+      
 #Validation
 I Should See Login Page
   Page Should Contain    Sign in

@@ -6,7 +6,7 @@ Resource    ../step_definitions/background.robot
 Background
     Given User Open The Website
     When User is logged into the website
-    And I Click The Project
+    And User Has Click On Project
 
 User Search Feature By Name
   Given I Am On The Feature Page

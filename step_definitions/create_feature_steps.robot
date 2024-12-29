@@ -14,7 +14,7 @@ I Click The Project
 I Click Button Add New Feature
     Click Button    //button[@data-target='#addNewFeature']
     Wait Until Element Is Visible    //input[@name='name']    timeout=15 seconds
-I Fill Project Name
+I Fill Feature Name
     Input Text    //input[@name='name']    ${FEATURE_NAME}
 I Choose Role Assign
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
