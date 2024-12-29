@@ -7,8 +7,9 @@ Resource    ../step_definitions/background.robot
 Background
   Given User opens the VentureHub website
   When User is logged into the website
+  
 Logout From Website
-  Given I Should See Dashboard
+  Given I Should See User Avatar
   When I Click User Dropdown   
   And I Click Logout Button
   Then I Should See Login Page

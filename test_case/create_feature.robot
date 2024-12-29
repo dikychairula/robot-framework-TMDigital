@@ -7,6 +7,7 @@ Resource    ../step_definitions/background.robot
 Background
   Given User opens the VentureHub website
   When User is logged into the website
+  
 User Add New Feature
   Given I Should See Dashboard
   When I Click The Project

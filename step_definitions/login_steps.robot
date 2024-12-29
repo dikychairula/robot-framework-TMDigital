@@ -15,4 +15,4 @@ I Click Submit Button
     Click Button    //button[contains(text(), 'Sign In')]
 I Should See Dashboard
     Element Should Be Visible    //h1[contains(text(), 'Dashboard')]
-    Sleep    5s
+    Sleep    3s
