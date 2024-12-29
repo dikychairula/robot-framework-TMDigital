@@ -1,6 +1,7 @@
 # Mengabaikan file dengan ekstensi .html dan .xml
 *.html
 *.xml
+*.png
 
 # Mengabaikan file tertentu
 env.robot
