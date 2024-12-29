@@ -9,7 +9,7 @@ Background
   When User is logged into the website
   And User Has Click On Project
 
-Add New Scenario
+User Add New Scenario
   Given User Has on Scenario Page
   When I Click Button Add New Scenario
   And I Fill Scenario Name

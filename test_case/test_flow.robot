@@ -34,7 +34,7 @@ User Search Feature By Name
     And I Click on Feature Name
     Then I Am On The Scenario Page
 
-Add New Scenario
+User Add New Scenario
     Given I Am On The Scenario Page
     When I Click Button Add New Scenario
     And I Fill Scenario Name
