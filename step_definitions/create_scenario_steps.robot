@@ -2,10 +2,10 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${FEATURE_SEARCH}    Robot15
+${FEATURE_SEARCH}    Feature 4
 ${SCENARIO_NAME}     Scenario Robot 1
 ${ROLE}              Diky Chairul Azwar
-${PRIORITY}          Medium
+${PRIORITY}          High
 ${PRE_CONDITION}     Given User Has Add Feature
 ${SCENARIO_STEPS}    Given User Has on Scenario Page\nWhen User Click Button Add\nAnd User Click Fill The Fields\nAnd User Click Submit Button\nThen User Has Add Scenario
 

@@ -2,14 +2,15 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${PROJECT}                 VentureHub
-${FEATURE_NAME}            Robot15
+${PROJECT}                 Testing Robot Framework
+${FEATURE_NAME}            Feature 4
 ${ROLE}                    Diky Chairul Azwar
-${FEATURE_DESCRIPTION}     Detail Robot Framework 15
+${FEATURE_DESCRIPTION}     Detail Robot Framework 4
 
 *** Keywords ***
 I Click The Project
     Wait Until Element Is Visible    //span[contains(text(), '${PROJECT}')]
+    Scroll Element Into View    //span[contains(text(), '${PROJECT}')]
     Click Element    //span[contains(text(), '${PROJECT}')]
     Element Should Be Visible    //h2[contains(text(), 'Features List')]    timeout=15 seconds
 I Click Button Add New Feature
@@ -19,7 +20,7 @@ I Fill Feature Name
     Input Text    //input[@name='name']    ${FEATURE_NAME}
 I Choose Role Assign
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
-    Wait Until Element Is Visible    //label[contains(text(), '${ROLE}')]//input[@type='checkbox']    timeout=15 seconds
+    Wait Until Element Is Visible    //label[contains(text(), '${ROLE}')]//input[@type='checkbox']    timeout=15s
     Click Element    //label[contains(text(), '${ROLE}')]//input[@type='checkbox']
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
 I Fill Description Feature
@@ -27,7 +28,7 @@ I Fill Description Feature
 I Click Button Save
     Click Button    //*[@id="form-add"]/div[5]/button[2]
 I Click Button Confirm
-    Wait Until Element Is Visible    //button[@id='btnAddFeature']
+    Wait Until Element Is Visible    //button[@id='btnAddFeature']    timeout=15s
     Click Button    //button[@id='btnAddFeature']
 I Click Button Ok
     Sleep    3s
