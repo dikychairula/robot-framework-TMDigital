@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${PROJECT}                 Testing Robot Framework
-${FEATURE_NAME}            Feature 4
+${FEATURE_NAME}            Feature 10
 ${ROLE}                    Diky Chairul Azwar
 ${FEATURE_DESCRIPTION}     Detail Robot Framework 4
 
@@ -17,7 +17,7 @@ I Click Button Add New Feature
     Click Button    //button[@data-target='#addNewFeature']
     Wait Until Element Is Visible    //input[@name='name']    timeout=15 seconds
 I Fill Feature Name
-    Input Text    //input[@name='name']    ${FEATURE_NAME}
+    Input Text    //input[@name='name']    FEATURE 10
 I Choose Role Assign
     Click Element    //button[contains(@class, 'multiselect dropdown-toggle btn btn-default')]
     Wait Until Element Is Visible    //label[contains(text(), '${ROLE}')]//input[@type='checkbox']    timeout=15s

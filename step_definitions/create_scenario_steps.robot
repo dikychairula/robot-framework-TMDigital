@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${FEATURE_SEARCH}    Feature 4
+${FEATURE_SEARCH}    Feature 10
 ${SCENARIO_NAME}     Scenario Robot 1
 ${ROLE}              Diky Chairul Azwar
 ${PRIORITY}          High
