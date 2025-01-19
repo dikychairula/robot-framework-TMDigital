@@ -4,8 +4,7 @@ Feature: Add Project
     Given User has login
     When User click menu Project
     And User click button Add New Project
-    And User click button Choose image file
-    And User choose image
+    And User uploads image
     And User fill Project Name
     And User fill Project Description
     And User choose Project Type

@@ -1,0 +1,7 @@
+{
+ 		"platformName": "Android",
+  	"platformVersion": "15.0",
+  	"deviceName": "emulator-5554",
+  	"app": "C:\\Users\\Dr Vortex\\Downloads\\TheApp-v1.10.0.apk", 
+  	"automationName": "UiAutomator2"
+	}
