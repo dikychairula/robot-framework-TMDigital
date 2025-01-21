@@ -5,8 +5,8 @@ Library    SeleniumLibrary
 Resource    ../step_definitions/background.robot
 
 *** Variables ***
-${target_month}    December 2025
-${day}    17
+${target_month}    November 2025
+${day}    15
 
 *** Keywords ***
 User has login
@@ -65,7 +65,7 @@ User choose End Date
     END
     
     Sleep    1s
-    Click Element    //td[text()='1']
+    Click Element    //td[text()='${day}']
     
 
 User choose Platform Type
