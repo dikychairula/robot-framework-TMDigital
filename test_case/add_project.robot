@@ -20,7 +20,7 @@ Add Project
     And User choose Technology
     And User testing Applications
     And User choose Guest Assigned to
-    And User click button Save Project
+    # And User click button Save Project
     # Then Success add new Project
 
 

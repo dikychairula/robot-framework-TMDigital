@@ -5,8 +5,8 @@ Library    SeleniumLibrary
 Resource    ../step_definitions/background.robot
 
 *** Variables ***
-${locator} =    //span[text()='Start Date']
-${Yeterday_Date} =      Get Current Date    result_format=%d/%m/%Y    increment=-1 day
+${target_month}    December 2025
+${day}    17
 
 *** Keywords ***
 User has login
@@ -28,7 +28,7 @@ User click button Add New Project
     sleep    2s
 
 User uploads image
-    Choose File    name=image    D://images/docker.jpeg
+    Choose File    name=image    C://apk/docker.jpg
     Sleep    2s
 
 User fill Project Name
@@ -56,8 +56,16 @@ User choose Start Date
     
 User choose End Date
     Double Click Element    //span[text()='End Date']
+
+    FOR    ${i}    IN RANGE    24
+        ${element_exists}    Run Keyword And Return Status    Element Should Be Visible    xpath=//th[text()='${target_month}']
+        Run Keyword If    ${element_exists}
+        ...    Exit For Loop
+        Click Element    (//th[@class='next'])[1]
+    END
+    
     Sleep    1s
-    Click Element    (//td[text()='31'])[2]
+    Click Element    //td[text()='1']
     
 
 User choose Platform Type
