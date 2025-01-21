@@ -7,6 +7,7 @@ Resource    ../step_definitions/background.robot
 *** Variables ***
 ${target_month}    November 2025
 ${day}    15
+@{technology}   NextJS    Golang    JavaScript
 
 *** Keywords ***
 User has login
@@ -53,10 +54,9 @@ User choose Start Date
     Sleep    1s
     Click Element    //td[@class='today day']
 
-    
 User choose End Date
     Double Click Element    //span[text()='End Date']
-
+    
     FOR    ${i}    IN RANGE    24
         ${element_exists}    Run Keyword And Return Status    Element Should Be Visible    xpath=//th[text()='${target_month}']
         Run Keyword If    ${element_exists}
@@ -67,7 +67,6 @@ User choose End Date
     Sleep    1s
     Click Element    //td[text()='${day}']
     
-
 User choose Platform Type
     Click Element    css=#form-add > div:nth-of-type(5) .multiselect
     Sleep    1s
@@ -77,7 +76,14 @@ User choose Platform Type
 User choose Technology
     Click Element    css=div:nth-of-type(6) > div:nth-of-type(1) .multiselect
     Sleep    1s
-    Click Element    //label[text()=' PHP 1']
+    
+    ${arrLength} =    Get Length    ${technology}
+    FOR    ${i}    IN RANGE    ${arrLength}
+        ${technologyIndex} =    Get From List    ${technology}    ${i}
+        Click Element    //label[text()=' ${technologyIndex}']
+        Sleep    1s
+    END
+
     Click Element    css=div:nth-of-type(6) > div:nth-of-type(1) .multiselect
 
 User testing Applications
